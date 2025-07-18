@@ -68,7 +68,7 @@ export function AppSidebar() {
 
                         className={` ${open ? '!w-5 !h-5' : '!w-4 !h-4'}`}
                       />
-                      <p className="text-gray-900 font-noto-thai font-medium">{item.title}</p>
+                      <p className="font-noto-thai font-medium">{item.title}</p>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -85,7 +85,7 @@ export function AppSidebar() {
                       <item.icon
                         className={` ${open ? '!w-5 !h-5' : '!w-4 !h-4'}`}
                       />
-                      <p className="text-gray-900 font-noto-thai font-medium">{item.title}</p>
+                      <p className="font-noto-thai font-medium">{item.title}</p>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

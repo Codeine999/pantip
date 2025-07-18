@@ -72,7 +72,7 @@ export const TrendCard = () => {
                             )}
                         </div>
                         <div className="flex-1">
-                            <h4 className=" text-gray-700 font-sans transition-colors md:text-md text-sm">
+                            <h4 className="font-sans transition-colors md:text-md text-sm">
                                 {topic.title}
                             </h4>
                             <div className="flex items-center space-x-4 mt-2 text-sm text-gray-500">
@@ -99,7 +99,7 @@ export const TrendCard = () => {
 
 const TrendSection = () => {
     return (
-            <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="bg-card rounded-2xl shadow-lg p-6">
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-3">
                         <div
@@ -108,7 +108,7 @@ const TrendSection = () => {
                         >
                             <TrendingUp className="w-4 h-4 text-white" />
                         </div>
-                        <p className="text-xl font-medium text-gray-900">Hot Topics</p>
+                        <p className="text-xl font-medium">Hot Topics</p>
                     </div>
                     <button className="flex items-center space-x-2 text-gray-500 hover:text-gray-700 transition-colors">
                         <Filter className="w-4 h-4" />

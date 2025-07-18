@@ -5,7 +5,7 @@ import Home from "./_components/home/Home";
 
 export default function page() {
   return (
-    <div className="bg-gray-50">
+    <div>
 
       <Home />
 

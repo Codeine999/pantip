@@ -72,8 +72,8 @@ export function Navbar() {
       </div>
 
 
-      <div className="items-center gap-2">
-        <div className='md:flex hidden'>
+      <div className="items-center">
+        <div className='md:flex hidden gap-2'>
           <Button
             size="icon"
             variant="ghost"
@@ -87,7 +87,7 @@ export function Navbar() {
               <Button
 
                 variant="ghost"
-                className='flex gap-1 items-center text-gray-600'
+                className='flex gap-1 items-center'
               >
                 {item.icon &&
                   <item.icon className="!w-5 !h-5 scale-x-[-1]"

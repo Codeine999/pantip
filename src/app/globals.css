@@ -51,8 +51,8 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: oklch(0.9846 0.0017 247.84);
+  --foreground: oklch(36.768% 0.00004 271.152 / 0.884);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -89,7 +89,7 @@
 
 .dark {
   --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --foreground: oklch(89.143% 0.0001 271.152);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -131,7 +131,9 @@
 }
 
 
-
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

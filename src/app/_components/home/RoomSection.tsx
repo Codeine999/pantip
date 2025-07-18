@@ -36,7 +36,7 @@ const rooms = [
 
 const RoomSection = () => {
     return (
-        <div className="bg-white rounded-2xl shadow-lg p-6">
+        <div className="bg-card rounded-2xl shadow-lg p-6">
             <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
                     <div
@@ -45,7 +45,7 @@ const RoomSection = () => {
                     >
                         <DoorOpen className="w-4 h-4 text-white" />
                     </div>
-                    <p className="text-xl font-medium text-gray-900">Select Rooms</p>
+                    <p className="text-xl font-medium">Select Rooms</p>
                 </div>
             </div>
 
@@ -62,7 +62,7 @@ const RoomSection = () => {
 
                                 <span className="text-2xl">{item.icon}</span>
 
-                                <p className="mt-2 text-xs  text-black whitespace-nowrap">
+                                <p className="mt-2 text-xs whitespace-nowrap">
                                     {item.title}
                                 </p>
                             </div>

@@ -63,7 +63,7 @@ const threads = [
 ];
 const FeedSection = () => {
     return (
-        <div className="p-6 border-1 rounded-2xl shadow-lg bg-white">
+        <div className="p-6 bg-card border-1 rounded-2xl shadow-lg">
             <div className="max-w-6xl mx-auto ">
                 <div className='flex gap-3'>
                     <div
@@ -74,8 +74,8 @@ const FeedSection = () => {
                     </div>
 
                     <div className='mb-6 flex flex-col gap-0.5'>
-                        <p className="text-xl font-medium text-gray-900">Feed</p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xl font-medium">Feed</p>
+                        <p className="text-xs">
                             กระทู้ที่มีคนเปิดอ่านมากในขณะนี้ อัปเดตทุกนาที
                         </p>
                     </div>

@@ -14,7 +14,7 @@ const HeroSection = () => {
             </div>
             <div className="md:p-4 md:px-6 pt-4 w-full flex">
                 <ChevronRight className="!w-5 !h-5" />
-                <p className="text-sm font-noto-thai font-medium text-gray-500">หน้าแรกพันทิป</p>
+                <p className="text-sm font-noto-thai font-medium">หน้าแรกพันทิป</p>
             </div>
 
         </div>
