@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Sidebar,
   SidebarContent,
@@ -15,7 +17,9 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarSeparator,
+  useSidebar
 } from "@/components/ui/sidebar";
+
 import Link from "next/link";
 
 import {
@@ -49,41 +53,49 @@ const actionItems = [
 
 
 export function AppSidebar() {
+  const { open } = useSidebar()
   return (
-    <aside className="w-58 border-r h-full flex flex-col justify-between text-sm shadow-sm">
+    <Sidebar collapsible="icon" className="transition-width duration-300 ease-in-out">
+      <SidebarContent className={` ${open ? 'p-4' : ''}`}>
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu className="mt-14">
+              {navItems.map((item) => (
+                <SidebarMenuItem key={item.title} className="py-1">
+                  <SidebarMenuButton asChild>
+                    <a href={item.url} className="flex gap-4">
+                      <item.icon
 
-      {/* Navigation */}
-      <nav className="py-2 px-4 space-y-1">
-        {navItems.map((item) => (
-          <Link
-            key={item.title}
-            href={item.url}
-            className="flex items-center gap-5 px-3 py-2 rounded-md hover:bg-gray-100 transition"
-          >
-            <item.icon className="w-5 h-5 text-gray-500" />
-            <span>{item.title}</span>
-          </Link>
-        ))}
+                        className={` ${open ? '!w-5 !h-5' : '!w-4 !h-4'}`}
+                      />
+                      <p className="text-gray-900 font-noto-thai font-medium">{item.title}</p>
+                    </a>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
 
-        <hr className="my-3" />
+            <hr className="my-3" />
 
-        {actionItems.map((item) => (
-          <Link
-            key={item.title}
-            href={item.url}
-            className="flex items-center gap-5 px-3 py-2 rounded-md hover:bg-gray-100 transition"
-          >
-            <item.icon className="w-5 h-5 text-gray-500" />
-            <span>{item.title}</span>
-          </Link>
-        ))}
-      </nav>
+            <SidebarMenu className="mt-4">
+              {actionItems.map((item) => (
+                <SidebarMenuItem key={item.title} className="py-1">
+                  <SidebarMenuButton asChild>
+                    <a href={item.url} className="flex gap-4">
+                      <item.icon
+                        className={` ${open ? '!w-5 !h-5' : '!w-4 !h-4'}`}
+                      />
+                      <p className="text-gray-900 font-noto-thai font-medium">{item.title}</p>
+                    </a>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
 
-
-      {/* Misc bottom links */}
-      <div className="px-4 py-3 text-xs text-gray-500 space-y-1 leading-tight">
-        <div className="pt-2 text-[10px] text-gray-400">© 2025 Pantip Clone</div>
-      </div>
-    </aside>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+      <p className="text-gray-900 p-4 text-xs opacity-30">Pantip + airbnb clone</p>
+    </Sidebar>
   );
 }

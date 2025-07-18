@@ -3,8 +3,8 @@ import { ChevronRight } from 'lucide-react';
 
 const HeroSection = () => {
     return (
-        <div>
-            <div className="w-full h-[187px] relative">
+        <div className="p-6">
+            <div className="w-full xl:h-[220px] h-[200px] relative  rounded-2xl overflow-hidden">
                 <Image
                     src="/constant/pantip.png"
                     alt="header"
@@ -12,14 +12,14 @@ const HeroSection = () => {
                     className="object-cover"
                 />
             </div>
-            <div className="border-1 w-full h-[40px]">
-                <div className="p-2 px-18 flex items-center">
-                    <ChevronRight className="!w-5 !h-5" />
-                    <p className="text-sm font-semibold text-gray-500">หน้าแรกพันทิป</p>
-                </div>
+            <div className="md:p-4 md:px-6 pt-4 w-full flex">
+                <ChevronRight className="!w-5 !h-5" />
+                <p className="text-sm font-noto-thai font-medium text-gray-500">หน้าแรกพันทิป</p>
             </div>
+
         </div>
     )
 }
+
 
 export default HeroSection
